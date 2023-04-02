@@ -88,6 +88,11 @@ async def _server(ctx):
             description = f"{ctx.author.mention}, ошибка, сервер не доступен.",
             colour = discord.Color.white
         ))
+
+@client.slash_command(name='p', description='Проверка работоспособности бота')
+async def _player(ctx):
+    ctx.delete()
+    ctx.send('work')
     
 
 
